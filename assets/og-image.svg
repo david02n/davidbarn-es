@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">David Barnes</title>
+  <desc id="desc">Product leadership, AI, and execution.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf8f3" />
+      <stop offset="100%" stop-color="#f1ede5" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="940" cy="110" r="180" fill="#6a7f6b" fill-opacity="0.08" />
+  <circle cx="1080" cy="540" r="220" fill="#1f1d1a" fill-opacity="0.03" />
+  <rect x="72" y="72" width="1056" height="486" rx="32" fill="#fffdf9" stroke="#1f1d1a" stroke-opacity="0.08" />
+  <text x="120" y="192" fill="#516553" font-family="Manrope, Arial, sans-serif" font-size="24" letter-spacing="4">PRODUCT LEADERSHIP, AI, AND EXECUTION</text>
+  <text x="120" y="304" fill="#1f1d1a" font-family="Georgia, Times New Roman, serif" font-size="78">
+    <tspan x="120" dy="0">David Barnes</tspan>
+    <tspan x="120" dy="96">builds better products,</tspan>
+    <tspan x="120" dy="96">teams, and AI-powered ways</tspan>
+    <tspan x="120" dy="96">of working.</tspan>
+  </text>
+  <text x="120" y="522" fill="#59554d" font-family="Manrope, Arial, sans-serif" font-size="28">
+    Product leader, builder, and advisor across SaaS, enterprise platforms, and early-stage ventures.
+  </text>
+</svg>
