@@ -3,6 +3,8 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav-menu a");
 const revealItems = document.querySelectorAll(".reveal");
 const sections = document.querySelectorAll("main section[id]");
+const heroTabs = document.querySelectorAll('.hero-toggle[role="tab"]');
+const heroPanels = document.querySelectorAll('.hero-panel[role="tabpanel"]');
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (nav && navToggle) {
@@ -41,6 +43,47 @@ if (!prefersReducedMotion && "IntersectionObserver" in window) {
   });
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+if (heroTabs.length && heroPanels.length) {
+  const activateHeroTab = (targetTab) => {
+    const targetPanel = targetTab.dataset.panel;
+
+    heroTabs.forEach((tab) => {
+      const isActive = tab === targetTab;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+      tab.setAttribute("tabindex", isActive ? "0" : "-1");
+    });
+
+    heroPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.panel !== targetPanel;
+    });
+  };
+
+  heroTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activateHeroTab(tab));
+
+    tab.addEventListener("keydown", (event) => {
+      let nextIndex = index;
+
+      if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+        nextIndex = (index + 1) % heroTabs.length;
+      } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+        nextIndex = (index - 1 + heroTabs.length) % heroTabs.length;
+      } else if (event.key === "Home") {
+        nextIndex = 0;
+      } else if (event.key === "End") {
+        nextIndex = heroTabs.length - 1;
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+      heroTabs[nextIndex].focus();
+      activateHeroTab(heroTabs[nextIndex]);
+    });
+  });
 }
 
 if ("IntersectionObserver" in window) {
