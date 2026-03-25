@@ -427,6 +427,10 @@ button {
   align-items: start;
 }
 
+.timeline-item[hidden] {
+  display: none !important;
+}
+
 .timeline-marker {
   width: 1rem;
   height: 1rem;
