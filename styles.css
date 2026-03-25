@@ -389,6 +389,26 @@ button {
   gap: 1.1rem;
 }
 
+.path-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.path-filter {
+  cursor: pointer;
+  min-height: 2.85rem;
+}
+
+.path-filter:hover {
+  transform: none;
+}
+
+.path-filter.button-secondary {
+  color: var(--text-muted);
+}
+
 .timeline::before {
   content: "";
   position: absolute;

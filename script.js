@@ -5,6 +5,8 @@ const revealItems = document.querySelectorAll(".reveal");
 const sections = document.querySelectorAll("main section[id]");
 const heroTabs = document.querySelectorAll('.hero-toggle[role="tab"]');
 const heroPanels = document.querySelectorAll('.hero-panel[role="tabpanel"]');
+const pathFilters = document.querySelectorAll(".path-filter");
+const timelineItems = document.querySelectorAll(".timeline-item[data-category]");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (nav && navToggle) {
@@ -84,6 +86,42 @@ if (heroTabs.length && heroPanels.length) {
       activateHeroTab(heroTabs[nextIndex]);
     });
   });
+}
+
+if (pathFilters.length && timelineItems.length) {
+  const activeCategories = new Set(["education", "projects", "work"]);
+
+  const applyPathFilters = () => {
+    timelineItems.forEach((item) => {
+      const category = item.dataset.category;
+      const isVisible = activeCategories.has(category);
+      item.hidden = !isVisible;
+    });
+  };
+
+  pathFilters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      const category = filter.dataset.filter;
+
+      if (activeCategories.has(category)) {
+        if (activeCategories.size === 1) {
+          return;
+        }
+        activeCategories.delete(category);
+      } else {
+        activeCategories.add(category);
+      }
+
+      const isActive = activeCategories.has(category);
+      filter.setAttribute("aria-pressed", String(isActive));
+      filter.classList.toggle("is-active", isActive);
+      filter.classList.toggle("button-primary", isActive);
+      filter.classList.toggle("button-secondary", !isActive);
+      applyPathFilters();
+    });
+  });
+
+  applyPathFilters();
 }
 
 if ("IntersectionObserver" in window) {
