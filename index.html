@@ -235,8 +235,19 @@
             <p class="section-kicker">My Path</p>
             <h2 id="path-title">The roles, builds, and experiments that got me here.</h2>
           </div>
+          <div class="path-filters reveal" role="group" aria-label="Filter timeline categories">
+            <button class="path-filter is-active" type="button" data-filter="education" aria-pressed="true">
+              Education
+            </button>
+            <button class="path-filter is-active" type="button" data-filter="projects" aria-pressed="true">
+              Projects &amp; ventures
+            </button>
+            <button class="path-filter is-active" type="button" data-filter="work" aria-pressed="true">
+              Work
+            </button>
+          </div>
           <div class="timeline" aria-label="Professional timeline">
-            <article class="timeline-item timeline-item-education">
+            <article class="timeline-item timeline-item-education" data-category="education">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta">
@@ -247,7 +258,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project">
+            <article class="timeline-item timeline-item-project" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta">
@@ -258,7 +269,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-education timeline-item-featured">
+            <article class="timeline-item timeline-item-education timeline-item-featured" data-category="education">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta">
@@ -271,7 +282,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project">
+            <article class="timeline-item timeline-item-project" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta">
@@ -282,7 +293,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-work">
+            <article class="timeline-item timeline-item-work" data-category="work">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Work</span></p>
@@ -290,7 +301,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-work">
+            <article class="timeline-item timeline-item-work" data-category="work">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Work</span></p>
@@ -298,7 +309,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-work">
+            <article class="timeline-item timeline-item-work" data-category="work">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Work</span></p>
@@ -306,7 +317,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-work">
+            <article class="timeline-item timeline-item-work" data-category="work">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Work</span></p>
@@ -314,7 +325,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-education timeline-item-featured">
+            <article class="timeline-item timeline-item-education timeline-item-featured" data-category="education">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta">
@@ -327,7 +338,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-work">
+            <article class="timeline-item timeline-item-work" data-category="work">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Work</span></p>
@@ -335,7 +346,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project">
+            <article class="timeline-item timeline-item-project" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Project</span></p>
@@ -344,7 +355,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project">
+            <article class="timeline-item timeline-item-project" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Project</span></p>
@@ -353,7 +364,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-work">
+            <article class="timeline-item timeline-item-work" data-category="work">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Work</span></p>
@@ -362,16 +373,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-training">
-              <div class="timeline-marker" aria-hidden="true"></div>
-              <div class="timeline-card">
-                <p class="timeline-meta"><span class="timeline-type">Training</span></p>
-                <h3>APMG Agile Project Management</h3>
-                <p class="timeline-subtitle">Foundation and Practitioner</p>
-              </div>
-            </article>
-
-            <article class="timeline-item timeline-item-project timeline-item-featured">
+            <article class="timeline-item timeline-item-project timeline-item-featured" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta">
@@ -384,7 +386,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project">
+            <article class="timeline-item timeline-item-project" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Project</span></p>
@@ -393,7 +395,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project timeline-item-featured">
+            <article class="timeline-item timeline-item-project timeline-item-featured" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta">
@@ -406,7 +408,33 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-work timeline-item-featured">
+            <article class="timeline-item timeline-item-education" data-category="education">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-meta">
+                  <span class="timeline-date">Issued Oct 2015</span>
+                  <span class="timeline-separator" aria-hidden="true">/</span>
+                  <span class="timeline-type">Education</span>
+                </p>
+                <h3>AgilePM Foundation</h3>
+                <p class="timeline-subtitle">APMG International</p>
+              </div>
+            </article>
+
+            <article class="timeline-item timeline-item-education" data-category="education">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-meta">
+                  <span class="timeline-date">Issued Oct 2015</span>
+                  <span class="timeline-separator" aria-hidden="true">/</span>
+                  <span class="timeline-type">Education</span>
+                </p>
+                <h3>AgilePM Practitioner</h3>
+                <p class="timeline-subtitle">APMG International</p>
+              </div>
+            </article>
+
+            <article class="timeline-item timeline-item-work timeline-item-featured" data-category="work">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta">
@@ -420,7 +448,7 @@
               </div>
             </article>
 
-            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured">
+            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured" data-category="work">
               <summary class="timeline-summary-toggle">
                 <span class="timeline-marker" aria-hidden="true"></span>
                 <span class="timeline-card">
@@ -442,7 +470,7 @@
               </div>
             </details>
 
-            <details class="timeline-item timeline-item-project timeline-item-expandable timeline-item-featured">
+            <details class="timeline-item timeline-item-project timeline-item-expandable timeline-item-featured" data-category="projects">
               <summary class="timeline-summary-toggle">
                 <span class="timeline-marker" aria-hidden="true"></span>
                 <span class="timeline-card">
@@ -464,7 +492,7 @@
               </div>
             </details>
 
-            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured">
+            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured" data-category="work">
               <summary class="timeline-summary-toggle">
                 <span class="timeline-marker" aria-hidden="true"></span>
                 <span class="timeline-card">
@@ -486,7 +514,7 @@
               </div>
             </details>
 
-            <article class="timeline-item timeline-item-project">
+            <article class="timeline-item timeline-item-project" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Project</span></p>
@@ -495,7 +523,20 @@
               </div>
             </article>
 
-            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured">
+            <article class="timeline-item timeline-item-education" data-category="education">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-meta">
+                  <span class="timeline-date">Issued Mar 2021</span>
+                  <span class="timeline-separator" aria-hidden="true">/</span>
+                  <span class="timeline-type">Education</span>
+                </p>
+                <h3>PMC Level I</h3>
+                <p class="timeline-subtitle">Pragmatic Institute</p>
+              </div>
+            </article>
+
+            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured" data-category="work">
               <summary class="timeline-summary-toggle">
                 <span class="timeline-marker" aria-hidden="true"></span>
                 <span class="timeline-card">
@@ -519,7 +560,88 @@
               </div>
             </details>
 
-            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured">
+            <article class="timeline-item timeline-item-education" data-category="education">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-meta">
+                  <span class="timeline-date">Issued Oct 2021</span>
+                  <span class="timeline-separator" aria-hidden="true">/</span>
+                  <span class="timeline-type">Education</span>
+                </p>
+                <h3>Code Foundations Skill Path</h3>
+                <p class="timeline-subtitle">Codecademy</p>
+              </div>
+            </article>
+
+            <details class="timeline-item timeline-item-education timeline-item-expandable" data-category="education">
+              <summary class="timeline-summary-toggle">
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <span class="timeline-card">
+                  <span class="timeline-meta">
+                    <span class="timeline-date">Issued Dec 2023</span>
+                    <span class="timeline-separator" aria-hidden="true">/</span>
+                    <span class="timeline-type">Education</span>
+                  </span>
+                  <span class="timeline-title-wrap">
+                    <span class="timeline-title">Python Essentials for MLOps</span>
+                    <span class="timeline-subtitle">Duke University</span>
+                  </span>
+                  <span class="timeline-summary">Skills: Python (Programming Language), MLOps.</span>
+                  <span class="timeline-expander" aria-hidden="true"></span>
+                </span>
+              </summary>
+              <div class="timeline-details">
+                <p>Issuer: Duke University.</p>
+                <p>Credential file: Coursera 9RJ83BPANL59.pdf</p>
+              </div>
+            </details>
+
+            <details class="timeline-item timeline-item-education timeline-item-expandable" data-category="education">
+              <summary class="timeline-summary-toggle">
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <span class="timeline-card">
+                  <span class="timeline-meta">
+                    <span class="timeline-date">Issued Mar 2024</span>
+                    <span class="timeline-separator" aria-hidden="true">/</span>
+                    <span class="timeline-type">Education</span>
+                  </span>
+                  <span class="timeline-title-wrap">
+                    <span class="timeline-title">AI For Business Leaders</span>
+                    <span class="timeline-subtitle">Udacity</span>
+                  </span>
+                  <span class="timeline-summary">Skills: Artificial Intelligence (AI), Machine Learning, +1 skill.</span>
+                  <span class="timeline-expander" aria-hidden="true"></span>
+                </span>
+              </summary>
+              <div class="timeline-details">
+                <p>Issuer: Udacity.</p>
+                <p>Credential file: learn.udacity.com_view-certificate_nd054.pdf</p>
+              </div>
+            </details>
+
+            <details class="timeline-item timeline-item-education timeline-item-expandable" data-category="education">
+              <summary class="timeline-summary-toggle">
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <span class="timeline-card">
+                  <span class="timeline-meta">
+                    <span class="timeline-date">Issued Apr 2024</span>
+                    <span class="timeline-separator" aria-hidden="true">/</span>
+                    <span class="timeline-type">Education</span>
+                  </span>
+                  <span class="timeline-title-wrap">
+                    <span class="timeline-title">Introduction to AI/ML Fluency</span>
+                    <span class="timeline-subtitle">Udacity</span>
+                  </span>
+                  <span class="timeline-summary">Skills: Machine Learning, Artificial Intelligence (AI).</span>
+                  <span class="timeline-expander" aria-hidden="true"></span>
+                </span>
+              </summary>
+              <div class="timeline-details">
+                <p>Issuer: Udacity.</p>
+              </div>
+            </details>
+
+            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured" data-category="work">
               <summary class="timeline-summary-toggle">
                 <span class="timeline-marker" aria-hidden="true"></span>
                 <span class="timeline-card">
@@ -541,7 +663,7 @@
               </div>
             </details>
 
-            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured">
+            <details class="timeline-item timeline-item-work timeline-item-expandable timeline-item-featured" data-category="work">
               <summary class="timeline-summary-toggle">
                 <span class="timeline-marker" aria-hidden="true"></span>
                 <span class="timeline-card">
@@ -563,7 +685,7 @@
               </div>
             </details>
 
-            <article class="timeline-item timeline-item-venture timeline-item-featured">
+            <article class="timeline-item timeline-item-venture timeline-item-featured" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Venture</span></p>
@@ -572,7 +694,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project timeline-item-featured">
+            <article class="timeline-item timeline-item-project timeline-item-featured" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Project</span></p>
@@ -581,7 +703,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project timeline-item-featured">
+            <article class="timeline-item timeline-item-project timeline-item-featured" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Project</span></p>
@@ -590,7 +712,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project timeline-item-featured">
+            <article class="timeline-item timeline-item-project timeline-item-featured" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Project</span></p>
@@ -599,7 +721,7 @@
               </div>
             </article>
 
-            <article class="timeline-item timeline-item-project timeline-item-featured">
+            <article class="timeline-item timeline-item-project timeline-item-featured" data-category="projects">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <p class="timeline-meta"><span class="timeline-type">Project</span></p>
