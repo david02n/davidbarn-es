@@ -425,6 +425,7 @@ button {
 .timeline-card {
   display: grid;
   gap: 0.35rem;
+  min-width: 0;
 }
 
 .timeline-meta {
@@ -475,6 +476,7 @@ button {
   align-items: start;
   list-style: none;
   cursor: pointer;
+  min-width: 0;
 }
 
 .timeline-summary-toggle:focus-visible {
@@ -487,15 +489,35 @@ button {
   display: none;
 }
 
+.timeline-summary-toggle > .timeline-card {
+  width: 100%;
+  min-width: 0;
+}
+
 .timeline-title-wrap {
   display: grid;
   gap: 0.2rem;
+  min-width: 0;
 }
 
 .timeline-title {
+  display: block;
   font-size: 1rem;
   font-weight: 700;
   color: var(--text);
+}
+
+.timeline-card .timeline-subtitle,
+.timeline-card .timeline-summary,
+.timeline-card .timeline-meta {
+  display: block;
+  min-width: 0;
+}
+
+.timeline-card .timeline-summary,
+.timeline-card .timeline-subtitle,
+.timeline-card .timeline-title {
+  overflow-wrap: anywhere;
 }
 
 .timeline-expander {
