@@ -305,6 +305,18 @@ button {
   padding-top: 0.25rem;
 }
 
+.hero-handoff {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.hero-handoff a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
