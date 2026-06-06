@@ -1,0 +1,100 @@
+---
+import '../styles/styles.css';
+
+const {
+  title = 'David Barnes | Product Leadership · Building · AI · Automation',
+  description = 'David Barnes is a UK-based product leader and builder with 12+ years of experience, mainly in B2B SaaS, working across product leadership, AI, and automation.',
+  ogTitle,
+  ogDescription,
+  ogType = 'website',
+  ogImage = '/assets/og-image.png',
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://davidbarn.es');
+const canonicalURL = new URL(Astro.url.pathname, site);
+const ogImageURL = new URL(ogImage, site);
+const resolvedOgTitle = ogTitle ?? title;
+const resolvedOgDescription = ogDescription ?? description;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="David Barnes" />
+    <link rel="canonical" href={canonicalURL.href} />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:title" content={resolvedOgTitle} />
+    <meta property="og:description" content={resolvedOgDescription} />
+    <meta property="og:image" content={ogImageURL.href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="David Barnes" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={resolvedOgTitle} />
+    <meta name="twitter:description" content={resolvedOgDescription} />
+    <meta name="twitter:image" content={ogImageURL.href} />
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="David Barnes" href="/rss.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="/" aria-label="David Barnes home">
+          <span class="wordmark-mark">DB</span>
+          <span class="wordmark-text">David Barnes</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Toggle navigation"
+          >
+            Menu
+          </button>
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="/#outcomes">Outcomes</a></li>
+            <li><a href="/#path">My Path</a></li>
+            <li><a href="/#focus">Focus</a></li>
+            <li><a href="/#projects">Explorations</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/blog">Writing</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="container reading-width footer-inner">
+        <p>David Barnes</p>
+        <p>Product Leadership · Building · AI · Automation</p>
+      </div>
+    </footer>
+
+    <script>
+      import '../scripts/site.js';
+    </script>
+  </body>
+</html>

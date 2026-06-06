@@ -47,6 +47,8 @@ if (!prefersReducedMotion && "IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
+// Hero tabs: roving-tabindex tablist. Works for any number of tabs (currently
+// "Me" and "Now"); "Me" stays the default active tab via the is-active markup.
 if (heroTabs.length && heroPanels.length) {
   const activateHeroTab = (targetTab) => {
     const targetPanel = targetTab.dataset.panel;
@@ -129,7 +131,8 @@ if ("IntersectionObserver" in window) {
     (entries) => {
       entries.forEach((entry) => {
         const id = entry.target.getAttribute("id");
-        const activeLink = document.querySelector(`.nav-menu a[href="#${id}"]`);
+        // Nav uses root-relative anchors (e.g. "/#path"); match on the hash suffix.
+        const activeLink = document.querySelector(`.nav-menu a[href$="#${id}"]`);
 
         if (!activeLink) {
           return;
