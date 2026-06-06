@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const formatDate = (date) =>
+  date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<Base
+  title="Writing | David Barnes"
+  description="Notes on product leadership, building, and where AI actually changes the work."
+>
+  <main id="main">
+    <section class="hero section" id="top">
+      <div class="container reading-width hero-layout">
+        <p class="eyebrow">Writing</p>
+        <h1 class="hero-title">Writing.</h1>
+        <p class="hero-copy">
+          Short pieces on product, building, and where AI actually changes the work.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-divider">
+      <div class="container reading-width">
+        <div class="notes-stack">
+          {
+            posts.map((post) => (
+              <article class="note-card">
+                <p class="timeline-meta">
+                  <time datetime={post.data.pubDate.toISOString()}>
+                    {formatDate(post.data.pubDate)}
+                  </time>
+                </p>
+                <h3><a href={`/blog/${post.id}/`}>{post.data.title}</a></h3>
+                <p>{post.data.description}</p>
+              </article>
+            ))
+          }
+          {posts.length === 0 && <p>Nothing published yet. Check back soon.</p>}
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

@@ -1,81 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>David Barnes | Product Leadership · Building · AI · Automation</title>
-    <meta
-      name="description"
-      content="David Barnes is a UK-based product leader and builder with 12+ years of experience, mainly in B2B SaaS, working across product leadership, AI, and automation."
-    />
-    <meta
-      name="keywords"
-      content="David Barnes, product leadership, AI, automation, B2B SaaS, product strategy, building"
-    />
-    <meta name="author" content="David Barnes" />
-    <link rel="canonical" href="https://davidbarn.es/" />
+---
+import Base from '../layouts/Base.astro';
+---
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://davidbarn.es/" />
-    <meta property="og:title" content="David Barnes | Product Leadership · Building · AI · Automation" />
-    <meta
-      property="og:description"
-      content="Product leader and builder. 12+ years mainly in B2B SaaS, working across product, AI, and automation."
-    />
-    <meta property="og:image" content="https://davidbarn.es/assets/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="David Barnes" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="David Barnes | Product Leadership · Building · AI · Automation" />
-    <meta
-      name="twitter:description"
-      content="Product leader and builder. 12+ years mainly in B2B SaaS, working across product, AI, and automation."
-    />
-    <meta name="twitter:image" content="https://davidbarn.es/assets/og-image.png" />
-
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Manrope:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="wordmark" href="#top" aria-label="David Barnes home">
-          <span class="wordmark-mark">DB</span>
-          <span class="wordmark-text">David Barnes</span>
-        </a>
-
-        <nav class="site-nav" aria-label="Primary">
-          <button
-            class="nav-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="nav-menu"
-            aria-label="Toggle navigation"
-          >
-            Menu
-          </button>
-          <ul id="nav-menu" class="nav-menu">
-            <li><a href="#outcomes">Outcomes</a></li>
-            <li><a href="#path">My Path</a></li>
-            <li><a href="#focus">Focus</a></li>
-            <li><a href="#projects">Explorations</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+<Base>
     <main id="main">
       <section class="hero section" id="top">
         <div class="container reading-width hero-layout">
@@ -709,12 +636,12 @@
       <!--
         PENDING DECISION (David's call): fate of "Focus" (#focus) and "Explorations" (#projects).
         These read like a consulting menu, now redundant with z2n.uk. Options on the table:
-          (a) Cut both, replace with a single "Writing" section linking to LinkedIn posts/articles.
+          (a) Cut both and lean on the new blog (#writing / /blog) for "something to read".
           (b) Merge into one "What I think about" section with 3 specific points of view (David to supply).
         For now both sections stay in place. If either is removed later, also delete its matching
-        nav <li> in #nav-menu (#focus / #projects) so no dead anchor links remain. The reveal,
-        section-observer, and nav-highlight JS are already null-safe, so removing a section won't
-        break script.js.
+        nav <li> in the layout header (/#focus / /#projects) so no dead anchor links remain. The
+        reveal, section-observer, and nav-highlight JS are already null-safe, so removing a section
+        won't break the client script.
       -->
       <section class="section section-divider" id="focus" aria-labelledby="focus-title">
         <div class="container reading-width">
@@ -794,6 +721,23 @@
         </div>
       </section>
 
+      <section class="section section-divider" id="writing" aria-labelledby="writing-title">
+        <div class="container reading-width">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Writing</p>
+            <h2 id="writing-title">Notes on product, building, and AI.</h2>
+          </div>
+          <div class="about-copy reveal">
+            <p>
+              Short pieces on product leadership, building, and where AI actually changes the work.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="/blog">Read the blog</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-divider" id="about" aria-labelledby="about-title">
         <div class="container reading-width">
           <div class="section-heading reveal">
@@ -838,14 +782,4 @@
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container reading-width footer-inner">
-        <p>David Barnes</p>
-        <p>Product Leadership · Building · AI · Automation</p>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+</Base>

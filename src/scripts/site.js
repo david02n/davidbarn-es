@@ -131,7 +131,8 @@ if ("IntersectionObserver" in window) {
     (entries) => {
       entries.forEach((entry) => {
         const id = entry.target.getAttribute("id");
-        const activeLink = document.querySelector(`.nav-menu a[href="#${id}"]`);
+        // Nav uses root-relative anchors (e.g. "/#path"); match on the hash suffix.
+        const activeLink = document.querySelector(`.nav-menu a[href$="#${id}"]`);
 
         if (!activeLink) {
           return;
