@@ -1,5 +1,9 @@
 ---
 import '../styles/styles.css';
+// Self-hosted fonts (bundled same-origin) replace the render-blocking
+// Google Fonts request. Only the Latin subset is downloaded.
+import '@fontsource-variable/manrope';
+import '@fontsource-variable/newsreader';
 
 const {
   title = 'David Barnes | Product Leadership · Building · AI · Automation',
@@ -44,12 +48,14 @@ const resolvedOgDescription = ogDescription ?? description;
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title="David Barnes" href="/rss.xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Manrope:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>

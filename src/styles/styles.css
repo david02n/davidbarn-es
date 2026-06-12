@@ -30,7 +30,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope Variable", "Manrope", sans-serif;
   background:
     radial-gradient(circle at top, rgba(106, 127, 107, 0.08), transparent 28%),
     linear-gradient(180deg, #fbf8f3 0%, var(--bg) 24%, #f5f2ec 100%);
@@ -273,7 +273,7 @@ button {
 .section-heading h2,
 .not-found-title {
   margin: 0;
-  font-family: "Newsreader", serif;
+  font-family: "Newsreader Variable", "Newsreader", serif;
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 0.97;
@@ -772,7 +772,7 @@ button {
 
 .prose h2,
 .prose h3 {
-  font-family: "Newsreader", serif;
+  font-family: "Newsreader Variable", "Newsreader", serif;
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.1;
